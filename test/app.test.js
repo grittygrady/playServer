@@ -22,8 +22,8 @@ describe('GET /apps', () => {
       .get('/apps')
       .query({ sort: 'Price'})
       .expect(400, 'Sort must be of genre or app title.')
-  })
-  it('should sort by "App"(title)', () => {
+  });
+  it('should sort by "App" title', () => {
     return supertest(app)
       .get('/books')
       .query({ sort: 'App' })
